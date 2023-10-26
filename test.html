@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ChatGPT</title>
+    <link rel="stylesheet" href="test.css" />
+    <script type="module">
+      import Input from "./framework/UI/SystemUI/Input.js";
+      import Button from "./framework/UI/SystemUI/Button.js";
+      import ChoiceColumn from "./framework/UI/SystemUI/ChoiceColumn.js";
+
+      {
+        const inputElement = document.createElement("div");
+        const tem = new Input(inputElement, {
+          name: "Input",
+          frame: { width: "70%", height: "100%" },
+          attributes: {
+            type: "default",
+            isTextarea: "true",
+          },
+          class: [],
+          content: {
+            text: "input",
+          },
+          style: {
+            "font-size": "14px",
+          },
+          actions: [],
+          script: [],
+        });
+        tem.startDrawing(`chatBox .sendBox`);
+      }
+
+      {
+        const buttonElement = document.createElement("div");
+        const tem = new Button(buttonElement, {
+          name: "Button",
+          frame: {
+            width: "20%",
+            height: "30px",
+          },
+          attributes: {
+            type: "important",
+          },
+          class: [],
+          content: {
+            text: "Send",
+          },
+          style: {
+            "font-size": "18px",
+          },
+          actions: [],
+          script: [],
+        });
+        tem.startDrawing(`chatBox .sendBox`);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="chatBox">
+      <div class="left"></div>
+      <div class="right">
+        <div class="top">Conversation with Bot</div>
+        <div class="container"></div>
+        <div class="sendBox"></div>
+      </div>
+    </div>
+
+    <script src="./framework/Laucher/Modules/axios/axios.min.js"></script>
+
+    <script type="module"></script>
+
+    <script>
+      setTimeout(() => {
+        const apiUrl = "https://api.openai.com/v1/chat/completions";
+        const prompt = "Hello, how are you?";
+        const temperature = 0.7;
+        const maxTokens = 100;
+        const apiKey = "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"; // 替换为您的实际 API 密钥
+        const chatBox = document.querySelector("#chatBox .container");
+        const sendButton = document.querySelector("#chatBox .button-text");
+
+        const requestData = {
+          temperature: temperature,
+          max_tokens: maxTokens,
+          // stream: true,
+          model: "gpt-3.5-turbo",
+          messages: [
+            //   { role: "system", content: "今天深圳天气怎么样" },
+            // { role: "user", content: `${message}` },
+          ],
+        };
+
+        const axiosConfig = {
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${apiKey}`,
+          },
+        };
+
+        /** */
+        let PosterName = "Poster Assistant";
+
+        let contentIndex = 0;
+        let contentList = [
+          "Certainly, I am more than willing to assist with the poster design. Could you please provide further details on this project?",
+          "Cool. What's the concert theme, and any specific things you want in the poster?",
+          "Got it, I'll make sure those elements are in the design. Any colors or styles you're leaning towards?",
+          "You got it! Here's the first draft.<br><img src='./framework/Assets/chatPoster1.svg' />",
+          "Absolutely, I'll make it pop.<br><img src='./framework/Assets/chatPoster2.svg' />",
+        ];
+
+        sendButton.addEventListener("click", () => {
+          let inputContent = document.querySelector(
+            "#chatBox .sendBox textarea"
+          );
+          console.log("button", inputContent);
+
+          if (inputContent.value.trim() !== "") {
+            // let div = document.createElement("div");
+            // div.innerHTML = inputContent;
+            // chatBox.appendChild(div);
+
+            // requestData.messages.push({ role: "user", content: inputContent });
+
+            // document.querySelector("#chatBox .sendBox input").value = "";
+
+            // axios
+            //   .post(apiUrl, JSON.stringify(requestData), axiosConfig)
+            //   .then(res => {
+            //     console.log(res.data);
+            //     let div = document.createElement("div");
+            //     let content = "";
+            //     res.data.choices.forEach(item => {
+            //       content += item.message.content + "\n";
+            //     });
+            //     div.innerHTML = content;
+
+            //     chatBox.appendChild(div);
+            //   })
+            //   .catch(error => {
+            //     console.error(error);
+            //   });
+
+            let userContent = document.createElement("div");
+
+            userContent.style.width = "100%";
+            userContent.style.display = "inline-block";
+            userContent.style.marginTop = "5px";
+
+            userContent.innerHTML = `
+          <div class="user-container">
+            <div class="user-content">
+              ivy
+              <div class="content">
+              
+                    ${inputContent.value}
+              
+              </div>
+            </div>
+            <div class="user"></div>
+          </div>
+          `;
+
+            chatBox.appendChild(userContent);
+
+            // document.querySelector(".chatBox .sendBox input").value = " ";
+            inputContent.value = "";
+            document.querySelector("#chatBox .sendBox #Input").style.height =
+              "30px";
+
+            setTimeout(() => {
+              let posterContent = document.createElement("div");
+
+              posterContent.style.width = "100%";
+              posterContent.style.display = "inline-block";
+              posterContent.style.marginTop = "5px";
+
+              posterContent.innerHTML = `
+          <div class="poster-container">
+            <div class="poster"></div>
+            <div class="poster-content">
+               ${PosterName}
+              <div class="content">
+            
+                    ${contentList[contentIndex]}
+               
+              </div>
+            </div>
+          </div>
+          `;
+
+              chatBox.appendChild(posterContent);
+              contentIndex++;
+            }, 1000);
+          }
+        });
+      }, 2000);
+    </script>
+  </body>
+</html>

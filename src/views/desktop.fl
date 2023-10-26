@@ -1,0 +1,17 @@
+<html>
+    <div id="desktop">
+        <h1 onclick="hello()">Hello World</h1>
+    </div>
+</html>
+
+<js>
+    function hello(){
+        console.log("hello World")
+    }
+</js>
+
+<css>
+#desktop{
+    color:red;
+}
+</css>

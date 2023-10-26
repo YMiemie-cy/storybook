@@ -1,0 +1,345 @@
+#group-259 {
+  box-sizing: border-box;
+  width: 100%;
+  height: 21px;
+  position: relative;
+}
+#group-259 .rectangle-602 {
+  border-radius: 0px;
+  position: absolute;
+  left: 20%;
+  top: 0;
+  overflow: visible;
+}
+#group-259 .frame-108 {
+  width: 27%;
+  height: 100%;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  overflow: hidden;
+}
+#group-259 .rectangle-565 {
+  border-radius: 0px;
+  position: absolute;
+  left: -7%;
+  top: 0px;
+  overflow: visible;
+}
+#group-259 .rectangle-562 {
+  border-radius: 0px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  overflow: visible;
+}
+#group-259 .ellipse-46 {
+  background: radial-gradient(closest-side, #121212 0%, rgba(18, 18, 18, 0) 100%);
+  border-radius: 50%;
+  width: 29%;
+  height: 110%;
+  position: absolute;
+  left: -3%;
+  top: -5%;
+}
+#group-259 .text {
+  color: #c4c6ca;
+  text-align: left;
+  font: 400 10px "Arial", sans-serif;
+  position: absolute;
+  left: 20%;
+  top: 24%;
+}
+#group-259 .rectangle-564 {
+  background: radial-gradient(closest-side, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0) 100%);
+  width: 16%;
+  height: 5%;
+  position: absolute;
+  left: 3%;
+  top: 0px;
+}
+#group-259 .ellipse-47 {
+  background: radial-gradient(closest-side, rgba(250, 124, 112, 0.21) 0%, rgba(250, 124, 112, 0) 100%);
+  border-radius: 50%;
+  width: 15%;
+  height: 38%;
+  position: absolute;
+  left: 0px;
+  top: -19%;
+}
+#group-259 input {
+  color: #c4c6ca;
+  caret-color: #7E828A;
+  width: 70%;
+  height: 80%;
+  border: 2px solid transparent;
+  outline-style: none;
+  background-color: transparent;
+}
+#frame-325 {
+  margin: 15px 0 12px 0;
+  box-sizing: border-box;
+  border-radius: 0;
+  width: 100%;
+  height: 30px;
+  position: relative;
+  overflow: hidden;
+}
+#frame-325 .rectangle-602 {
+  background: rgba(42, 45, 56, 0.5);
+  border-radius: 4px 0px 0px 4px;
+  width: 34%;
+  height: 70%;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+#frame-325 .rectangle-565 {
+  background: rgba(245, 133, 122, 0.08);
+  border-radius: 4px 0px 0px 4px;
+  width: 34%;
+  height: 70%;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+#frame-325 .rectangle-589 {
+  border-radius: 4px;
+  border-width: 0.8px;
+  border-style: solid;
+  border-image: linear-gradient(90deg, rgba(255, 255, 255, 0.8) 0%, #9c81f2 100%);
+  border-image-slice: 1;
+  width: 99%;
+  height: 70%;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+#frame-325 .line-25 {
+  border-style: dashed;
+  border-color: #c5c6c9;
+  border-width: 1px 0 0 0;
+  width: 9%;
+  height: 0px;
+  position: absolute;
+  left: 34%;
+  top: 14%;
+  transform-origin: 0 0;
+  transform: rotate(90deg) scale(1, 1);
+}
+#frame-325 .rectangle-5652 {
+  background: radial-gradient(closest-side, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0) 100%, rgba(255, 255, 255, 0) 100%);
+  width: 33%;
+  height: 2%;
+  position: absolute;
+  left: 1%;
+  top: 0px;
+}
+#frame-325 .ellipse-58 {
+  position: absolute;
+  left: -1%;
+  top: -1%;
+  overflow: visible;
+}
+#frame-325 .ellipse-582 {
+  position: absolute;
+  left: -4%;
+  top: -1%;
+  overflow: visible;
+}
+#frame-325 .font-size {
+  color: #c5c6c9;
+  text-align: left;
+  font: 400 10px "Arial", sans-serif;
+  position: absolute;
+  left: 4%;
+  top: 16%;
+  width: 54%;
+}
+#frame-325 .px {
+  color: #7e828a;
+  text-align: left;
+  font: 400 8px "Arial", sans-serif;
+  position: absolute;
+  left: 87%;
+  top: 23%;
+}
+#frame-325 .inputBox {
+  position: absolute;
+  right: 18%;
+  height: 100%;
+  width: 30%;
+}
+#frame-325 .inputBox input {
+  color: #c4c6ca;
+  caret-color: #7E828A;
+  width: 100%;
+  height: 50%;
+  text-align: right;
+  font-size: 11px;
+  border: 2px solid transparent;
+  outline-style: none;
+  background-color: transparent;
+}
+#group-258 {
+  box-sizing: border-box;
+  position: absolute;
+  inset: 0;
+}
+.rectangle-642 {
+  border-radius: 0px;
+  position: absolute;
+  left: 925.53px;
+  top: 468px;
+  transform: translate(-18.5px, 0px);
+  overflow: visible;
+}
+.frame-136 {
+  width: 79px;
+  height: 21px;
+  position: absolute;
+  left: 922px;
+  top: 468px;
+  overflow: hidden;
+}
+.rectangle-566 {
+  border-radius: 0px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  overflow: visible;
+}
+.rectangle-565 {
+  border-radius: 0px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  overflow: visible;
+}
+.ellipse-48 {
+  background: radial-gradient(closest-side, rgba(18, 18, 18, 0.9) 0%, rgba(18, 18, 18, 0) 100%);
+  border-radius: 50%;
+  width: 84px;
+  height: 25px;
+  position: absolute;
+  left: 80px;
+  top: -2px;
+  transform-origin: 0 0;
+  transform: rotate(0deg) scale(-1, 1);
+}
+.ellipse-482 {
+  background: radial-gradient(closest-side, rgba(250, 124, 112, 0.21) 0%, rgba(250, 124, 112, 0) 100%);
+  border-radius: 50%;
+  width: 40px;
+  height: 12px;
+  position: absolute;
+  left: 39px;
+  top: -7px;
+  transform-origin: 0 0;
+  transform: rotate(0deg) scale(-1, 1);
+}
+.inpaint {
+  color: #c4c6ca;
+  text-align: left;
+  font: 400 10px "Arial", sans-serif;
+  position: absolute;
+  left: 24px;
+  top: 5px;
+}
+.rectangle-643 {
+  background: radial-gradient(closest-side, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0) 100%);
+  width: 32.08px;
+  height: 0.66px;
+  position: absolute;
+  left: 960.34px;
+  top: 468px;
+  transform-origin: 0 0;
+  transform: rotate(0deg) scale(-1, 1);
+}
+.group-263 {
+  box-sizing: border-box;
+  position: relative;
+  inset: 0;
+  width: 100%;
+  height: 21px;
+  margin: 10px 0;
+}
+.group-263 input {
+  position: absolute;
+  width: 50%;
+  height: 60%;
+  left: 40%;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  color: #C4C6CA;
+  z-index: 1;
+  border: 2px solid transparent;
+  outline-style: none;
+  background-color: transparent;
+}
+.group-263 .rectangle-602 {
+  border-radius: 0px;
+  position: absolute;
+  left: 30.5%;
+  top: 0px;
+  overflow: visible;
+  margin-right: 4px;
+}
+.group-263 .frame-108 {
+  width: 43%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+}
+.group-263 .rectangle-565 {
+  border-radius: 0px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  overflow: visible;
+}
+.group-263 .rectangle-562 {
+  border-radius: 0px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  overflow: visible;
+}
+.group-263 .ellipse-46 {
+  background: radial-gradient(closest-side, #121212 0%, rgba(18, 18, 18, 0) 100%);
+  border-radius: 50%;
+  width: 44%;
+  height: 114%;
+  position: absolute;
+  left: -2%;
+  top: -4%;
+}
+.group-263 .option-1 {
+  color: #c5c6c9;
+  text-align: left;
+  font: 400 10px "Arial", sans-serif;
+  position: absolute;
+  left: 6%;
+  top: 23%;
+}
+.group-263 .rectangle-564 {
+  background: radial-gradient(closest-side, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0) 100%);
+  width: 24%;
+  height: 4%;
+  position: absolute;
+  left: 2%;
+  top: 0px;
+}
+.group-263 .ellipse-47 {
+  background: radial-gradient(closest-side, rgba(250, 124, 112, 0.21) 0%, rgba(250, 124, 112, 0) 100%);
+  border-radius: 50%;
+  width: 24%;
+  height: 38%;
+  position: absolute;
+  left: 0px;
+  top: -19%;
+}

@@ -1,0 +1,10 @@
+.input-container{
+  position :relative;
+  overflow :hidden;
+  borderRadius :4px;
+  display :flex;
+  alignItems :center;
+}
+#Input textarea::-webkit-scrollbar {
+  width: 0; 
+}

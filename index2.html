@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hello World!</title>
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="node_modules/dragula/dist/dragula.min.css" />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body
+    style="
+      height: 100vh;
+      width: 100vw;
+      background: url(./framework/Assets/Finalize--Dashboard.png) no-repeat center center;
+      background-size: contain;
+    "
+  >
+    <div
+      id="demo"
+      style="
+        cursor: pointer;
+        position: absolute;
+        bottom: 10px;
+        left: 30%;
+        width: 17%;
+        height: 21%;
+        background: url(./framework/Assets/demo1.png) no-repeat center center;
+        background-size: contain;
+      "
+    ></div>
+  </body>
+  <script src="node_modules/dragula/dist/dragula.min.js"></script>
+
+  <script>
+    document.querySelector("#demo").addEventListener("click", () => {
+      window.myApi.openNewWindowFunction("http://127.0.0.1:7860");
+    });
+  </script>
+</html>

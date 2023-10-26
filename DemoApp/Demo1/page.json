@@ -1,0 +1,321 @@
+{
+  "name": "",
+  "time": "",
+  "config": {
+    "style": {
+      "background": "#353945"
+    }
+  },
+  "actions": [
+    {
+      "script": "sd.generate()",
+      "data": []
+    }
+  ],
+  "layers": [
+    {
+      "type": "text",
+      "name": "title",
+      "frame": {
+        "width": "",
+        "height": "",
+        "x": "473px",
+        "y": "30px",
+        "zIndex": "1"
+      },
+      "attributes": {
+        "type": "headline"
+      },
+      "content": {
+        "text": "Region ReImage"
+      },
+      "style": {},
+      "actions": []
+    },
+    {
+      "type": "text",
+      "name": "introduce",
+      "frame": {
+        "width": "",
+        "height": "",
+        "x": "350px",
+        "y": "50px",
+        "zIndex": "1"
+      },
+      "attributes": {
+        "type": "textContent"
+      },
+      "content": {
+        "text": "Enter prompt words to redraw the selected area in the picture"
+      },
+      "style": {},
+      "actions": []
+    },
+    {
+      "type": "button",
+      "name": "penButton",
+      "frame": {
+        "width": "20px",
+        "height": "20px",
+        "x": "325px",
+        "y": "79px",
+        "zIndex": "1"
+      },
+      "attributes": {
+        "type": "timelyImportant"
+      },
+      "content": {
+        "icon": "./framework/assets/pens.svg"
+      },
+      "style": {},
+      "actions": []
+    },
+    {
+      "type": "button",
+      "name": "eraserButton",
+      "frame": {
+        "width": "20px",
+        "height": "20px",
+        "x": "350px",
+        "y": "79px",
+        "zIndex": "1"
+      },
+      "attributes": {
+        "type": "timelyImportant"
+      },
+      "content": {
+        "icon": "./framework/assets/eraser.svg"
+      },
+      "style": {},
+      "actions": []
+    },
+    {
+      "type": "button",
+      "name": "clearCanvasBtn",
+      "frame": {
+        "width": "20px",
+        "height": "20px",
+        "x": "480px",
+        "y": "79px",
+        "zIndex": "1"
+      },
+      "attributes": {
+        "type": "timelyImportant"
+      },
+      "content": {
+        "icon": "./framework/assets/clearCanvas.svg"
+      },
+      "style": {},
+      "actions": [
+        {
+          "function": "clearCanvas",
+          "data": [
+            "clearCanvasBtn-Element"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "button",
+      "name": "backCanvasBtn",
+      "frame": {
+        "width": "20px",
+        "height": "20px",
+        "x": "505px",
+        "y": "79px",
+        "zIndex": "1"
+      },
+      "attributes": {
+        "type": "timelyImportant"
+      },
+      "content": {
+        "icon": "./framework/assets/leftReturn.svg"
+      },
+      "style": {},
+      "actions": [
+        {
+          "function": "undoLastStep",
+          "data": [
+            "backCanvasBtn-Element"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "imageUploader",
+      "name": "0",
+      "frame": {
+        "width": "200px",
+        "height": "247px",
+        "x": "325px",
+        "y": "100px",
+        "zIndex": "1"
+      },
+      "style": {},
+      "attributes": {},
+      "actions": []
+    },
+    {
+      "type": "imageDisplay",
+      "name": "imageDisplay",
+      "frame": {
+        "width": "200px",
+        "height": "247px",
+        "x": "542px",
+        "y": "100px",
+        "zIndex": "1"
+      },
+      "style": {},
+      "attributes": {},
+      "actions": []
+    },
+    {
+      "type": "input",
+      "name": "prompt",
+      "frame": {
+        "width": "418px",
+        "height": "47px",
+        "x": "325px",
+        "y": "388px",
+        "zIndex": "1"
+      },
+      "attributes": {
+        "placeholder": "Enter a prompt",
+        "type": "input"
+      },
+      "content": {
+        "text": "Prompt"
+      },
+      "style": {},
+      "actions": []
+    },
+    {
+      "type": "button",
+      "name": "previewBtn",
+      "frame": {
+        "width": "90px",
+        "height": "32px",
+        "x": "555px",
+        "y": "452px",
+        "zIndex": "1"
+      },
+      "attributes": {
+        "type": "timelyImportant"
+      },
+      "content": {
+        "text": "Preview"
+      },
+      "style": {},
+      "actions": [
+        {
+          "event": "click",
+          "script": "canvasImg2Img.js",
+          "data": [
+            "previewBtn-Element"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "button",
+      "name": "saveButton",
+      "frame": {
+        "width": "90px",
+        "height": "32px",
+        "x": "654px",
+        "y": "452px",
+        "zIndex": "1"
+      },
+      "attributes": {
+        "type": "important"
+      },
+      "content": {
+        "text": "Save"
+      },
+      "style": {},
+      "actions": [
+        {
+          "event": "click",
+          "script": "saveImg.js",
+          "data": [
+            "renderings-Element"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "button",
+      "name": "penButton22",
+      "frame": {
+        "width": "20px",
+        "height": "20px",
+        "x": "325px",
+        "y": "579px",
+        "zIndex": "1"
+      },
+      "attributes": {
+        "type": "timelyImportant"
+      },
+      "content": {
+        "icon": "./framework/assets/pens.svg"
+      },
+      "style": {},
+      "actions": [],
+      "children": [
+        {
+          "type": "button",
+          "name": "penButton33",
+          "frame": {
+            "width": "20px",
+            "height": "20px",
+            "x": "325px",
+            "y": "79px",
+            "zIndex": "1"
+          },
+          "attributes": {
+            "type": "timelyImportant"
+          },
+          "content": {
+            "icon": "./framework/assets/pens.svg"
+          },
+          "style": {},
+          "actions": []
+        }
+      ]
+    },
+    {
+      "type": "navigationBar",
+      "name": "navBar",
+      "frame": {
+        "width": "131px",
+        "height": "35px",
+        "x": "473px",
+        "y": "530px",
+        "zIndex": "1"
+      },
+      "attributes": {},
+      "content": {
+        "list": [
+          {
+            "icon": "./framework/assets/Dashboard-icon.svg",
+            "text": "Dashboard"
+          },
+          {
+            "icon": "./framework/assets/MyLibrary-icon.svg",
+            "text": "MyLibrary"
+          },
+          {
+            "icon": "./framework/assets/Collection-icon.svg",
+            "text": "Collection"
+          },
+          {
+            "icon": "./framework/assets/Settings-icon.svg",
+            "text": "Settings"
+          }
+        ]
+      },
+      "style": {},
+      "actions": []
+    }
+  ]
+}

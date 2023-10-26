@@ -1,0 +1,53 @@
+<svg width="50" height="44" viewBox="0 0 50 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_734_1880)">
+<rect width="50" height="44" rx="4" fill="#2A2D38"/>
+<rect x="0.4" y="0.4" width="49.2" height="43.2" rx="3.6" fill="#3C414E" fill-opacity="0.4" stroke="url(#paint0_linear_734_1880)" stroke-width="0.8"/>
+<ellipse cx="28.5" cy="23.5" rx="51.5" ry="30.5" fill="url(#paint1_radial_734_1880)"/>
+<ellipse cx="38" cy="31.5" rx="20" ry="18.5" fill="url(#paint2_radial_734_1880)"/>
+<ellipse cx="19.5" cy="-2" rx="42.5" ry="20" fill="url(#paint3_radial_734_1880)"/>
+<rect x="3" width="24" height="0.6" fill="url(#paint4_radial_734_1880)"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M18.6328 28.364C20.2615 29.9927 22.5115 31 24.9968 31C29.9673 31 33.9968 26.9705 33.9968 22C33.9968 19.5148 32.9894 17.2648 31.3607 15.6361L30.446 16.5508C31.8405 17.9453 32.7031 19.8718 32.7031 22C32.7031 26.2559 29.2527 29.7063 24.9968 29.7063C22.8687 29.7063 20.9422 28.8437 19.5476 27.4491L18.6328 28.364ZM21.3772 25.6195C22.3035 26.5459 23.5832 27.1188 24.9968 27.1188C27.8236 27.1188 30.1156 24.8268 30.1156 22C30.1156 20.5864 29.5427 19.3067 28.6163 18.3804L21.3772 25.6195Z" fill="#9C81F2"/>
+<g filter="url(#filter0_d_734_1880)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M16 22C16 17.0295 20.0295 13 25 13C27.4851 13 29.7352 14.0074 31.3639 15.6362L30.4493 16.5508C29.0547 15.1562 27.1281 14.2937 25 14.2937C20.7437 14.2937 17.2937 17.7437 17.2937 22C17.2937 24.1279 18.1563 26.0545 19.5509 27.4492L18.6361 28.364C17.0074 26.7353 16 24.4853 16 22ZM28.6196 18.3805L21.3805 25.6196C20.4541 24.6932 19.8812 23.4135 19.8812 22C19.8812 19.1728 22.1728 16.8812 25 16.8812C26.4135 16.8812 27.6932 17.4541 28.6196 18.3805Z" fill="url(#paint5_linear_734_1880)" shape-rendering="crispEdges"/>
+</g>
+</g>
+<defs>
+<filter id="filter0_d_734_1880" x="15" y="12" width="19.3633" height="19.364" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dx="1" dy="1"/>
+<feGaussianBlur stdDeviation="1"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_734_1880"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_734_1880" result="shape"/>
+</filter>
+<linearGradient id="paint0_linear_734_1880" x1="25" y1="0" x2="25" y2="44" gradientUnits="userSpaceOnUse">
+<stop stop-color="white" stop-opacity="0.24"/>
+<stop offset="1" stop-color="#9C81F2" stop-opacity="0.2"/>
+</linearGradient>
+<radialGradient id="paint1_radial_734_1880" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(28.5 23.5) rotate(90) scale(30.5 51.5)">
+<stop stop-color="#121212" stop-opacity="0.55"/>
+<stop offset="1" stop-color="#121212" stop-opacity="0"/>
+</radialGradient>
+<radialGradient id="paint2_radial_734_1880" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(38 31.5) rotate(90) scale(18.5 20)">
+<stop stop-color="#F5857A" stop-opacity="0.08"/>
+<stop offset="1" stop-color="#121212" stop-opacity="0"/>
+</radialGradient>
+<radialGradient id="paint3_radial_734_1880" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(19.5 -2) rotate(90) scale(20 42.5)">
+<stop stop-color="#F5857A" stop-opacity="0.16"/>
+<stop offset="1" stop-color="#121212" stop-opacity="0"/>
+</radialGradient>
+<radialGradient id="paint4_radial_734_1880" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(15.3871 0.374982) rotate(-0.397118) scale(10.839 2343.56)">
+<stop stop-color="white" stop-opacity="0.4"/>
+<stop offset="1" stop-color="white" stop-opacity="0"/>
+</radialGradient>
+<linearGradient id="paint5_linear_734_1880" x1="19.6818" y1="17.0909" x2="24.591" y2="22.4091" gradientUnits="userSpaceOnUse">
+<stop stop-color="#9C81F2"/>
+<stop offset="1" stop-color="white" stop-opacity="0.9"/>
+</linearGradient>
+<clipPath id="clip0_734_1880">
+<rect width="50" height="44" rx="4" fill="white"/>
+</clipPath>
+</defs>
+</svg>

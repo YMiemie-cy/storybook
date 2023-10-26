@@ -1,0 +1,228 @@
+{
+    "name": "",
+    "time": "",
+    "config": {
+        "style": {
+            "background": "#353945",
+            "display": "flex",
+            "flex-direction": "column",
+            "align-items": "center",
+            "justify-content": "center"
+        }
+    },
+    "actions": [
+        {
+            "script": "",
+            "data": []
+        }
+    ],
+    "layers": [
+        {
+            "type": "VStack",
+            "name": "VStack_1",
+            "frame": {
+                "width": "100px",
+                "height": "100px",
+                "x": "",
+                "y": "",
+                "color": ""
+            },
+            "attributes": {
+                "type": ""
+            },
+            "content": {},
+            "style": {
+                "border-radius": " 4px",
+                " display": " flex",
+                " flex-direction": " column",
+                " justify-content": " center",
+                " align-items": " center",
+                " background-color": " rgba(120, 120, 120, 0.2)",
+                " box-sizing": " border-box",
+                " padding": " 5px",
+                " z-index": " 0"
+            },
+            "actions": [],
+            "scripts": [],
+            "children": [
+                {
+                    "type": "Text",
+                    "name": "Text-Headline_1",
+                    "frame": {
+                        "width": "116px",
+                        "height": "18px",
+                        "x": "",
+                        "y": "",
+                        "color": ""
+                    },
+                    "attributes": {
+                        "type": "headline"
+                    },
+                    "content": {
+                        "text": "SoraNix"
+                    },
+                    "style": {
+                        "background-image": " linear-gradient(90deg, rgb(156, 129, 242) 0%, rgba(255, 255, 255, 0.73) 100%)",
+                        " background-clip": " text",
+                        " color": " transparent",
+                        " text-align": " center",
+                        " font": " 700 16px Arial, sans-serif"
+                    },
+                    "actions": [],
+                    "scripts": [
+                        "./DemoAppText/demo2/scripts/Text-Headline_1.js"
+                    ]
+                },
+                {
+                    "type": "Text",
+                    "name": "Text-TextContent_1",
+                    "frame": {
+                        "width": "436px",
+                        "height": "19px",
+                        "x": "",
+                        "y": "",
+                        "color": ""
+                    },
+                    "attributes": {
+                        "type": "textContent"
+                    },
+                    "content": {
+                        "text": "Quickly generate gorgeous images of characters"
+                    },
+                    "style": {
+                        "color": " rgb(126, 130, 138)",
+                        " text-align": " center",
+                        " font": " 400 14px Arial, sans-serif",
+                        " position": " relative",
+                        " display": " flex",
+                        " align-items": " center",
+                        " justify-content": " center"
+                    },
+                    "actions": [],
+                    "scripts": [
+                        "./DemoAppText/demo2/scripts/Text-TextContent_1.js"
+                    ]
+                },
+                {
+                    "type": "ParameterBlock",
+                    "name": "ParameterBlock_1",
+                    "frame": {
+                        "width": "495px",
+                        "height": "28px",
+                        "x": "",
+                        "y": "",
+                        "color": "rgb(197, 198, 201)"
+                    },
+                    "attributes": {
+                        "type": ""
+                    },
+                    "content": {
+                        "text": "Number of images"
+                    },
+                    "style": {},
+                    "actions": [],
+                    "scripts": [
+                        "./DemoAppText/demo2/scripts/ParameterBlock_1.js"
+                    ]
+                },
+                {
+                    "type": "HStack",
+                    "name": "HStack_1",
+                    "frame": {
+                        "width": "100px",
+                        "height": "100px",
+                        "x": "",
+                        "y": "",
+                        "color": ""
+                    },
+                    "attributes": {
+                        "type": ""
+                    },
+                    "content": {},
+                    "style": {
+                        "display": " flex",
+                        " justify-content": " center",
+                        " align-items": " center",
+                        " background-color": " rgba(120, 120, 120, 0.5)",
+                        " box-sizing": " border-box",
+                        " padding": " 5px",
+                        " z-index": " 0"
+                    },
+                    "actions": [],
+                    "scripts": [],
+                    "children": [
+                        {
+                            "type": "Input",
+                            "name": "Input-Input_1",
+                            "frame": {
+                                "width": "376px",
+                                "height": "54px",
+                                "x": "",
+                                "y": "",
+                                "color": "rgb(196, 198, 202)"
+                            },
+                            "attributes": {
+                                "type": "input"
+                            },
+                            "content": {
+                                "text": "Prompt"
+                            },
+                            "style": {
+                                " font-size": " 16px"
+                            },
+                            "actions": [],
+                            "scripts": [
+                                "./DemoAppText/demo2/scripts/Input-Input_1.js"
+                            ]
+                        },
+                        {
+                            "type": "Button",
+                            "name": "Button-Important_1",
+                            "frame": {
+                                "width": "112px",
+                                "height": "51px",
+                                "x": "3px",
+                                "y": "",
+                                "color": "rgb(196, 198, 202)"
+                            },
+                            "attributes": {
+                                "type": "important"
+                            },
+                            "content": {
+                                "text": "Generate"
+                            },
+                            "style": {
+                                "cursor": " pointer",
+                                " font-size": " 16px"
+                            },
+                            "actions": [],
+                            "scripts": [
+                                "./DemoAppText/demo1/scripts/Button-Important_1.js"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "ImageDisplay",
+                    "name": "ImageDisplay_1",
+                    "frame": {
+                        "width": "515px",
+                        "height": "292px",
+                        "x": "",
+                        "y": "4px",
+                        "color": ""
+                    },
+                    "attributes": {
+                        "type": ""
+                    },
+                    "content": {},
+                    "style": {},
+                    "actions": [],
+                    "scripts": [
+                        "./DemoAppText/demo2/scripts/ImageDisplay_1.js"
+                    ]
+                }
+            ]
+        }
+    ]
+}

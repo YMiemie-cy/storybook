@@ -1,0 +1,112 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #3c414e;
+  width: 95vw;
+  height: 95vh;
+}
+#chatBox {
+  display: flex;
+  align-items: center;
+  width: 626px;
+  height: 626px;
+  background-color: #2f333f;
+  border-radius: 10px;
+  overflow: hidden;
+}
+#chatBox .right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+#chatBox .right .top {
+  width: 100%;
+  height: 30px;
+  color: #C5C6C9;
+  background: url("framework/Assets/editor/mac-windowbar.svg") no-repeat left center / cover;
+  text-align: center;
+  line-height: 30px;
+}
+#chatBox .right .container {
+  width: 100%;
+  flex: 1;
+  box-sizing: border-box;
+  padding: 10px;
+  overflow-y: auto;
+}
+#chatBox .right .container::-webkit-scrollbar {
+  width: 0;
+}
+#chatBox .right .container .user-container {
+  display: flex;
+  align-items: flex-start;
+  float: right;
+}
+#chatBox .right .container .user-container .user {
+  background: url("framework/Assets/user-avatar.svg") no-repeat center center / contain;
+  width: 40px;
+  height: 40px;
+}
+#chatBox .right .container .user-container .user-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+  color: #C5C6C9;
+  font-size: 10px;
+  max-width: 250px;
+  height: auto;
+}
+#chatBox .right .container .user-container .user-content .content {
+  flex: 1;
+  max-width: 100%;
+  word-wrap: break-word;
+  color: #c5c6c9;
+  padding: 5px;
+  background-color: #272a33;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+#chatBox .right .container .poster-container {
+  display: flex;
+  align-items: flex-start;
+  float: left;
+}
+#chatBox .right .container .poster-container .poster {
+  background: url("./DemoAppText/demo6000/assets/gpt-pic/1-Harry Potter.png") no-repeat center center / contain;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+#chatBox .right .container .poster-container .poster-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  color: #C5C6C9;
+  font-size: 10px;
+  max-width: 250px;
+  height: auto;
+}
+#chatBox .right .container .poster-container .poster-content .content {
+  flex: 1;
+  max-width: 100%;
+  word-wrap: break-word;
+  color: #c5c6c9;
+  padding: 5px;
+  background-color: #272a33;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+#chatBox .right .sendBox {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 10px;
+}

@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ChatGPT</title>
+    <link rel="stylesheet" href="chat2.css" />
+    <script type="module">
+      import Input from "./framework/UI/SystemUI/Input.js";
+      import Button from "./framework/UI/SystemUI/Button.js";
+      import ChoiceColumn from "./framework/UI/SystemUI/ChoiceColumn.js";
+
+      {
+        const inputElement = document.createElement("div");
+        const tem = new Input(inputElement, {
+          name: "Input",
+          frame: { width: "70%", height: "100%" },
+          attributes: {
+            type: "default",
+            isTextarea: "true",
+          },
+          class: [],
+          content: {
+            text: "input",
+          },
+          style: {
+            "font-size": "14px",
+          },
+          actions: [],
+          script: [],
+        });
+        tem.startDrawing(`chatBox .sendBox`);
+      }
+
+      {
+        const buttonElement = document.createElement("div");
+        const tem = new Button(buttonElement, {
+          name: "Button",
+          frame: {
+            width: "20%",
+            height: "30px",
+          },
+          attributes: {
+            type: "important",
+          },
+          class: [],
+          content: {
+            text: "Send",
+          },
+          style: {
+            "font-size": "18px",
+          },
+          actions: [],
+          script: [],
+        });
+        tem.startDrawing(`chatBox .sendBox`);
+      }
+
+      {
+        const ChoiceColumnElement = document.createElement("div");
+        const tem = new ChoiceColumn(ChoiceColumnElement, {
+          name: "ChoiceColumn_1",
+          frame: {
+            width: "90%",
+            height: "98px",
+          },
+          attributes: {
+            default: "0",
+          },
+          content: {
+            list: [
+              {
+                url: "./DemoAppText/demo6000/assets/gpt-pic/1-Harry Potter.png",
+                name: "Harry Potter",
+              },
+              {
+                url: "./DemoAppText/demo6000/assets/gpt-pic/2-SpongeBob.png",
+                name: "SpongeBob",
+              },
+              {
+                url: "./DemoAppText/demo6000/assets/gpt-pic/3-Sullivan.png",
+                name: "Sullivan",
+              },
+              {
+                url: "./DemoAppText/demo6000/assets/gpt-pic/4-Mr. Bean.png",
+                name: "Mr. Bean",
+              },
+              {
+                url: "./DemoAppText/demo6000/assets/gpt-pic/5-Elsa.png",
+                name: "Elsa",
+              },
+              {
+                url: "./DemoAppText/demo6000/assets/gpt-pic/6-Naruto.png",
+                name: "Naruto",
+              },
+              {
+                url: "./DemoAppText/demo6000/assets/gpt-pic/7-Mickey.png",
+                name: "Mickey",
+              },
+            ],
+          },
+          style: {
+            margin: "auto",
+          },
+        });
+        tem.startDrawing("chatBox .container");
+      }
+    </script>
+  </head>
+  <body>
+    <div id="chatBox">
+      <div class="left"></div>
+      <div class="right">
+        <div class="top">Conversation with Bot</div>
+        <div class="container"></div>
+        <div class="sendBox"></div>
+      </div>
+    </div>
+
+    <script src="./framework/Laucher/Modules/axios/axios.min.js"></script>
+
+    <script type="module"></script>
+
+    <script>
+      setTimeout(() => {
+        const apiUrl = "https://api.openai.com/v1/chat/completions";
+        const prompt = "Hello, how are you?";
+        const temperature = 0.7;
+        const maxTokens = 100;
+        const apiKey = "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"; // 替换为您的实际 API 密钥
+        const chatBox = document.querySelector("#chatBox .container");
+        const sendButton = document.querySelector("#chatBox .button-text");
+
+        const requestData = {
+          temperature: temperature,
+          max_tokens: maxTokens,
+          // stream: true,
+          model: "gpt-3.5-turbo",
+          messages: [
+            //   { role: "system", content: "今天深圳天气怎么样" },
+            // { role: "user", content: `${message}` },
+          ],
+        };
+
+        const axiosConfig = {
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${apiKey}`,
+          },
+        };
+
+        /** */
+        let PosterName = "Harry Potter";
+
+        let contentIndex = 0;
+        let contentList = [
+          // "Of course, I'm more than willing to lend a hand with the poster design. Might you be so kind as to share additional details about this project?",
+          // "Hey, hey!<br>I'm more than happy to help with the poster design. Can you pretty please give me more details about this project?",
+          // "Hey, buddy!<br>I'm more than ready to jump in and help out with the poster design. Could you kindly spill the beans and give me more deets on this project, my friend?",
+          // "Got it. What's the theme of the concert? Are there any specific details or images to include in the poster?",
+          // "Alright, I'll take these requirements into account and design a poster with a summer atmosphere and musical elements. Do you have any specific color preferences or styles in mind?",
+          // "Understood. Here's the initial draft.<br><img src='./framework/Assets/chatPoster1.svg' />",
+          // "Certainly!<br><img src='./framework/Assets/chatPoster2.svg' />",
+          "Hello, I'm Harry Potter, and I'm a wizard who's seen my fair share of magical adventures.",
+          "Of course, Hogwarts is a very magical place. Learning magic is full of surprises and challenges. Sometimes, you'll find yourself excited about learning spells and magical skills, but some subjects can be quite challenging.",
+          "Well, I have a soft spot for Defense Against the Dark Arts. This class teaches us how to protect ourselves and others, especially against dark wizards. I also really enjoy Flying Lessons because the feeling of soaring freely in the air is just fantastic.",
+          "Hello, I'm Harry Potter, and I'm a wizard who's seen my fair share of magical adventures.",
+          "Oh, Barney is one of my closest friends, and our friendship is very special. We've shared countless adventures and laughter together, but most importantly, we're always there to support each other when needed.",
+          "The key to friendship is understanding and supporting each other. No matter what happens, real friends are there to accompany you when you need them, just like Barney is for me.",
+          "You're welcome, buddy. Friendship is like a bikini bottom, always making life more fun!",
+        ];
+
+        setTimeout(() => {
+          let posterContent = document.createElement("div");
+
+          posterContent.style.width = "100%";
+          posterContent.style.display = "inline-block";
+          posterContent.style.marginTop = "5px";
+
+          posterContent.innerHTML = `
+          <div class="poster-container">
+            <div class="poster"></div>
+            <div class="poster-content">
+               ${PosterName}
+              <div class="content">
+            
+                    ${contentList[contentIndex]}
+               
+              </div>
+            </div>
+          </div>
+          `;
+
+          chatBox.appendChild(posterContent);
+          contentIndex++;
+        }, 100);
+
+        document
+          .querySelector(".container [data-name='1']")
+          .addEventListener("click", () => {
+            const container = document.querySelector(".container");
+            if (container.lastChild) {
+              // container.removeChild(container.lastChild);
+              PosterName = "SpongeBob";
+              container.removeChild(container.lastChild);
+              container.removeChild(container.lastChild);
+              container.removeChild(container.lastChild);
+              container.removeChild(container.lastChild);
+              container.removeChild(container.lastChild);
+              // document.querySelector(".poster").style.background =
+              //   "url('./DemoAppText/demo6000/assets/gpt-pic/2-SpongeBob.png') no-repeat center center / contain";
+              //     setTimeout(() => {
+              //       let posterContent = document.createElement("div");
+
+              //       posterContent.style.width = "100%";
+              //       posterContent.style.display = "inline-block";
+
+              //       posterContent.innerHTML = `
+              // <div class="poster-container">
+              //   <div class="poster"></div>
+              //   <div class="poster-content">
+              //    ${PosterName}
+              //     <div class="content">
+
+              //           ${contentList[contentIndex]}
+
+              //     </div>
+              //   </div>
+              // </div>
+              // `;
+
+              //       contentIndex++;
+              //       chatBox.appendChild(posterContent);
+              //     }, 1000);
+
+              setTimeout(() => {
+                let posterContent = document.createElement("div");
+
+                posterContent.style.width = "100%";
+                posterContent.style.display = "inline-block";
+                posterContent.style.marginTop = "5px";
+
+                posterContent.innerHTML = `
+          <div class="poster-container">
+            <div class="poster" style="
+            background: ${
+              PosterName == "SpongeBob"
+                ? "url('./DemoAppText/demo6000/assets/gpt-pic/2-SpongeBob.png') no-repeat center center / contain"
+                : PosterName == "Sullivan"
+                ? "url('./DemoAppText/demo6000/assets/gpt-pic/3-Sullivan.png') no-repeat center center / contain"
+                : ""
+            }
+            "></div>
+            <div class="poster-content">
+               ${PosterName}
+              <div class="content">
+            
+                    ${contentList[contentIndex]}
+               
+              </div>
+            </div>
+          </div>
+          `;
+
+                chatBox.appendChild(posterContent);
+                contentIndex++;
+              }, 1000);
+            }
+          });
+
+        document
+          .querySelector(".container [data-name='2']")
+          .addEventListener("click", () => {
+            const container = document.querySelector(".container");
+            if (container.lastChild) {
+              // container.removeChild(container.lastChild);
+              PosterName = "Sullivan";
+              // document.querySelector(".poster").style.background =
+              //   "url('./DemoAppText/demo6000/assets/gpt-pic/2-Sullivan.png') no-repeat center center / contain";
+              //     setTimeout(() => {
+              //       let posterContent = document.createElement("div");
+
+              //       posterContent.style.width = "100%";
+              //       posterContent.style.display = "inline-block";
+
+              //       posterContent.innerHTML = `
+              // <div class="poster-container">
+              //   <div class="poster"></div>
+              //   <div class="poster-content">
+              //      ${PosterName}
+              //     <div class="content">
+
+              //           ${contentList[contentIndex]}
+
+              //     </div>
+              //   </div>
+              // </div>
+              // `;
+
+              //       contentIndex++;
+              //       chatBox.appendChild(posterContent);
+              //     }, 1000);
+            }
+          });
+
+        /** */
+
+        sendButton.addEventListener("click", () => {
+          let inputContent = document.querySelector(
+            "#chatBox .sendBox textarea"
+          );
+          console.log("button", inputContent);
+
+          if (inputContent.value.trim() !== "") {
+            // let div = document.createElement("div");
+            // div.innerHTML = inputContent;
+            // chatBox.appendChild(div);
+
+            // requestData.messages.push({ role: "user", content: inputContent });
+
+            // document.querySelector("#chatBox .sendBox input").value = "";
+
+            // axios
+            //   .post(apiUrl, JSON.stringify(requestData), axiosConfig)
+            //   .then(res => {
+            //     console.log(res.data);
+            //     let div = document.createElement("div");
+            //     let content = "";
+            //     res.data.choices.forEach(item => {
+            //       content += item.message.content + "\n";
+            //     });
+            //     div.innerHTML = content;
+
+            //     chatBox.appendChild(div);
+            //   })
+            //   .catch(error => {
+            //     console.error(error);
+            //   });
+
+            let userContent = document.createElement("div");
+
+            userContent.style.width = "100%";
+            userContent.style.display = "inline-block";
+            userContent.style.marginTop = "5px";
+
+            userContent.innerHTML = `
+          <div class="user-container">
+            <div class="user-content">
+              ivy
+              <div class="content">
+              
+                    ${inputContent.value}
+              
+              </div>
+            </div>
+            <div class="user"></div>
+          </div>
+          `;
+
+            chatBox.appendChild(userContent);
+
+            // document.querySelector(".chatBox .sendBox input").value = " ";
+            inputContent.value = "";
+            document.querySelector("#chatBox .sendBox #Input").style.height =
+              "30px";
+
+            setTimeout(() => {
+              let posterContent = document.createElement("div");
+
+              posterContent.style.width = "100%";
+              posterContent.style.display = "inline-block";
+              posterContent.style.marginTop = "5px";
+
+              posterContent.innerHTML = `
+          <div class="poster-container">
+            <div class="poster" style="
+            background: ${
+              PosterName == "SpongeBob"
+                ? "url('./DemoAppText/demo6000/assets/gpt-pic/2-SpongeBob.png') no-repeat center center / contain"
+                : PosterName == "Sullivan"
+                ? "url('./DemoAppText/demo6000/assets/gpt-pic/3-Sullivan.png') no-repeat center center / contain"
+                : ""
+            }
+            "></div>
+            <div class="poster-content">
+               ${PosterName}
+              <div class="content">
+            
+                    ${contentList[contentIndex]}
+               
+              </div>
+            </div>
+          </div>
+          `;
+
+              chatBox.appendChild(posterContent);
+              contentIndex++;
+            }, 1000);
+          }
+        });
+      }, 2000);
+    </script>
+  </body>
+</html>

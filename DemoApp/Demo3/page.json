@@ -1,0 +1,190 @@
+{
+  "name": "",
+  "time": "",
+  "config": {
+    "style": {
+      "background": "#353945",
+      "display": "flex",
+      "flex-direction": "column",
+      "align-items": "center"
+    }
+  },
+  "actions": [
+    {
+      "script": "",
+      "data": []
+    }
+  ],
+  "layers": [
+    {
+      "type": "SideBar",
+      "name": "SideBar",
+      "frame": {
+        "width": "",
+        "height": "",
+        "x": "",
+        "y": "",
+        "zIndex": ""
+      },
+      "attributes": {},
+      "content": {
+        "list": [
+          {
+            "title": "Setting the Number",
+            "content": "Setting the number of images generated at one time",
+            "image": "./DemoApp/Demo3/assets/sidebar-step1.svg"
+          },
+          {
+            "title": "Enter the Prompt",
+            "content": "Enter the prompt to describe the image you want",
+            "image": "./DemoApp/Demo3/assets/sidebar-step2.svg"
+          },
+          {
+            "title": "Generate Image",
+            "content": "Create gorgeous character images with diverse styles like 'mecha' and 'Chinese clothes' .",
+            "image": "./DemoApp/Demo3/assets/sidebar-step3.svg"
+          }
+        ]
+      },
+      "style": {},
+      "actions": []
+    },
+    {
+      "type": "Text",
+      "name": "title",
+      "frame": {
+        "width": "",
+        "height": "",
+        "x": "",
+        "y": "",
+        "zIndex": ""
+      },
+      "attributes": {
+        "type": "headline"
+      },
+      "content": {
+        "text": "SoraNix"
+      },
+      "style": {
+        "margin-top": "65px"
+      },
+      "actions": []
+    },
+    {
+      "type": "Text",
+      "name": "introduce",
+      "frame": {
+        "width": "",
+        "height": "",
+        "x": "",
+        "y": "",
+        "zIndex": ""
+      },
+      "attributes": {
+        "type": "textContent"
+      },
+      "content": {
+        "text": "Quickly generate gorgeous images of characters"
+      },
+      "style": {
+        "margin": "5px 0 18px 0"
+      },
+      "actions": []
+    },
+    {
+      "type": "ParameterBlock",
+      "name": "ParameterBlock",
+      "frame": {
+        "width": "418px",
+        "height": "26px",
+        "x": "",
+        "y": "",
+        "zIndex": ""
+      },
+      "attributes": {},
+      "content": {
+        "text": "Number of images"
+      },
+      "style": {},
+      "actions": []
+    },
+    {
+      "type": "HStack",
+      "name": "InputBox",
+      "frame": {
+        "width": "",
+        "height": "",
+        "x": "",
+        "y": "",
+        "zIndex": ""
+      },
+      "attributes": {},
+      "content": {},
+      "style": {
+        "justify-content": "center",
+        "margin": "12px 0 24px 0"
+      },
+      "actions": [],
+      "children": [
+        {
+          "type": "Input",
+          "name": "Prompt",
+          "frame": {
+            "width": "324px",
+            "height": "47px",
+            "x": "",
+            "y": "",
+            "zIndex": ""
+          },
+          "attributes": {
+            "type": "input"
+          },
+          "content": {
+            "text": "Prompt"
+          },
+          "style": {},
+          "actions": []
+        },
+        {
+          "type": "Button",
+          "name": "generate-button",
+          "frame": {
+            "width": "90px",
+            "height": "47px",
+            "x": "",
+            "y": "",
+            "zIndex": ""
+          },
+          "attributes": {
+            "type": "important"
+          },
+          "content": {
+            "text": "Generate"
+          },
+          "style": {
+            "margin-left": "10px"
+          },
+          "actions": [],
+          "scripts": [
+            "./DemoApp/Demo3/scripts/ButtonScript.js"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "ImgViewer",
+      "name": "ImageDisplay",
+      "frame": {
+        "width": "418px",
+        "height": "247px",
+        "x": "",
+        "y": "",
+        "zIndex": ""
+      },
+      "attributes": {},
+      "content": {},
+      "style": {},
+      "actions": []
+    }
+  ]
+}

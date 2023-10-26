@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>demo</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/themes/classic.min.css"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.min.js"
+      integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <script src="./framework/Laucher/Node/node.js" type="module"></script>
+    <script src="./framework/AIComponents/sd.js" type="module"></script>
+    <script src="dist/bundle.js"></script>
+
+    <script src="./framework/index.js"></script>
+    <!-- <script src="./framework/myapp.js" type="module"></script> -->
+  </head>
+  <body style="font-family: 'Arial', sans-serif; margin: 0">
+    <div
+      id="wrapper"
+      style="width: 100vw; height: 100vh; position: relative; display: flex"
+    >
+      <div
+        id="sidebar"
+        style="height: 100vh; transition: width 0.3s ease-in-out"
+      ></div>
+
+      <div id="container" style="flex: 1; position: relative"></div>
+    </div>
+
+    <script>
+      const node = new UIComponent();
+      node.init();
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/pickr.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/pickr.es5.min.js"></script>
+  </body>
+</html>

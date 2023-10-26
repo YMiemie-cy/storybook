@@ -1,0 +1,15 @@
+.navigationBar-container{
+  position :relative;
+}
+#NavBar .nav-item:hover {
+    background-color: #555;
+  }
+
+  #NavBar .nav-item.active {
+    background: url(./framework/Assets/nav-active.svg) no-repeat center
+      center;
+    background-size: cover;
+  }
+  #NavBar a{
+    max-height: 30px
+  }

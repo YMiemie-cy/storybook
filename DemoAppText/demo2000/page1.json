@@ -1,0 +1,262 @@
+{
+    "name": "",
+    "time": "",
+    "config": {
+        "style": {
+            "background": "#353945",
+            "display": "flex",
+            "flex-direction": "column",
+            "align-items": "center",
+            "justify-content": "center"
+        }
+    },
+    "actions": [
+        {
+            "script": "",
+            "data": []
+        }
+    ],
+    "scripts": [],
+    "layers": [
+        {
+            "type": "Text",
+            "name": "Label_1",
+            "frame": {
+                "width": "100px",
+                "height": "30px",
+                "x": "",
+                "y": "",
+                "color": ""
+            },
+            "attributes": {
+                "type": "headline"
+            },
+            "content": {
+                "text": "Sketch2Pic"
+            },
+            "style": {
+                "margin": "4px",
+                "border": "2px solid transparent",
+                "background-image": " linear-gradient(90deg, rgb(156, 129, 242) 0%, rgba(255, 255, 255, 0.73) 100%)",
+                "background-clip": " text",
+                "color": " transparent",
+                "text-align": " center",
+                "font": " 700 16px Arial, sans-serif"
+            },
+            "actions": [],
+            "scripts": []
+        },
+        {
+            "type": "Text",
+            "name": "Subtitle_1",
+            "frame": {
+                "width": "399px",
+                "height": "13px",
+                "x": "",
+                "y": "",
+                "color": ""
+            },
+            "attributes": {
+                "type": "textContent"
+            },
+            "content": {
+                "text": "Turn your doodles into stunning images with a single touch"
+            },
+            "style": {
+                "margin": "4px",
+                "border": "2px solid transparent",
+                "color": " rgb(126, 130, 138)",
+                "text-align": " center",
+                "font": " 400 14px Arial, sans-serif",
+                "position": " relative",
+                "display": " flex",
+                "align-items": " center",
+                "justify-content": " center"
+            },
+            "actions": [],
+            "scripts": []
+        },
+        {
+            "type": "ParameterBlock",
+            "name": "ParameterBlock_1",
+            "frame": {
+                "width": "374px",
+                "height": "28px",
+                "x": "",
+                "y": "",
+                "color": "rgb(197, 198, 201)"
+            },
+            "attributes": {
+                "type": ""
+            },
+            "content": {
+                "text": "Number of images"
+            },
+            "style": {
+                "margin": "4px",
+                "border": "2px solid transparent"
+            },
+            "actions": [],
+            "scripts": []
+        },
+        {
+            "type": "HStack",
+            "name": "HStack_1",
+            "frame": {
+                "width": "100px",
+                "height": "100px",
+                "x": "",
+                "y": "",
+                "color": ""
+            },
+            "attributes": {
+                "type": ""
+            },
+            "content": {},
+            "style": {
+                "margin": "4px",
+                "border": "2px solid transparent",
+                "display": " flex",
+                "justify-content": " center",
+                "align-items": " center",
+                "background-color": " rgba(120, 120, 120, 0.5)",
+                "box-sizing": " border-box",
+                "padding": " 5px",
+                "z-index": " 0"
+            },
+            "actions": [],
+            "scripts": [],
+            "children": [
+                {
+                    "type": "ImgLoader",
+                    "name": "ImgLoader_1",
+                    "frame": {
+                        "width": "240px",
+                        "height": "300px",
+                        "x": "",
+                        "y": "",
+                        "color": ""
+                    },
+                    "attributes": {
+                        "type": "",
+                        "isCanvas": "true"
+                    },
+                    "content": {
+                        "text": "Upload Image"
+                    },
+                    "style": {
+                        "margin": "4px",
+                        "border": "2px solid transparent",
+                        "border-radius": " 8px",
+                        "background-color": " rgb(255, 255, 255)",
+                        "position": " relative"
+                    },
+                    "actions": [],
+                    "scripts": []
+                },
+                {
+                    "type": "ImgViewer",
+                    "name": "ImgViewer_1",
+                    "frame": {
+                        "width": "240px",
+                        "height": "300px",
+                        "x": "",
+                        "y": "",
+                        "color": ""
+                    },
+                    "attributes": {
+                        "type": ""
+                    },
+                    "content": {},
+                    "style": {
+                        "margin": "4px",
+                        "border": "2px solid transparent"
+                    },
+                    "actions": [],
+                    "scripts": []
+                }
+            ]
+        },
+        {
+            "type": "HStack",
+            "name": "HStack_2",
+            "frame": {
+                "width": "100px",
+                "height": "100px",
+                "x": "",
+                "y": "",
+                "color": ""
+            },
+            "attributes": {
+                "type": ""
+            },
+            "content": {},
+            "style": {
+                "margin": "4px",
+                "border": "2px solid transparent",
+                "display": " flex",
+                "justify-content": " center",
+                "align-items": " center",
+                "background-color": " rgba(120, 120, 120, 0.5)",
+                "box-sizing": " border-box",
+                "padding": " 5px",
+                "z-index": " 0"
+            },
+            "actions": [],
+            "scripts": [],
+            "children": [
+                {
+                    "type": "Input",
+                    "name": "Input_1",
+                    "frame": {
+                        "width": "316px",
+                        "height": "43px",
+                        "x": "",
+                        "y": "",
+                        "color": "rgb(196, 198, 202)"
+                    },
+                    "attributes": {
+                        "type": "input"
+                    },
+                    "content": {
+                        "text": "Prompt"
+                    },
+                    "style": {
+                        "margin": "4px",
+                        "border": "2px solid transparent",
+                        "font-size": " 14px"
+                    },
+                    "actions": [],
+                    "scripts": []
+                },
+                {
+                    "type": "Button",
+                    "name": "PrimaryBtn_1",
+                    "frame": {
+                        "width": "102px",
+                        "height": "43px",
+                        "x": "",
+                        "y": "",
+                        "color": "rgb(196, 198, 202)"
+                    },
+                    "attributes": {
+                        "type": "important"
+                    },
+                    "content": {
+                        "text": "Generate"
+                    },
+                    "style": {
+                        "margin": "4px",
+                        "border": "2px solid transparent",
+                        "cursor": " pointer",
+                        "font-size": " 14px"
+                    },
+                    "actions": [],
+                    "scripts": [
+                        "./DemoAppText/demo2000/scripts/PrimaryBtn_1.js"
+                    ]
+                }
+            ]
+        }
+    ]
+}
