@@ -1,4 +1,5 @@
 import { createSlider } from "./Slider";
+import SliderEle from "../../framework/UI/SystemUI/Slider.js";
 import "./Slider.css";
 
 // More on how to set up stories at: https://storybook.js.org/docs/html/writing-stories/introduction
@@ -7,7 +8,26 @@ export default {
   tags: ["autodocs"],
   render: ({ label, ...args }) => {
     // You can either use a function to create DOM elements or use a plain html string!
-    // return `<div>${label}</div>`;
+    if (!document.querySelector("#storybook-docs").getAttribute("hidden")) {
+      document.querySelector(".sb-story").innerHTML = "";
+      const SliderElement = document.createElement("div");
+      const tem = new SliderEle(SliderElement, {
+        name: "Slider",
+        frame: {
+          width: args.width,
+          height: args.height,
+          x: args.x,
+          y: args.y,
+        },
+        attributes: {},
+        class: [],
+        content: {},
+        style: args.style,
+        actions: [],
+        script: [],
+      });
+      tem.startDrawing("storybook-docs .sb-story");
+    }
     return createSlider({ label, ...args });
   },
   argTypes: {
@@ -16,7 +36,7 @@ export default {
         category: "frame", // 创建一个自定义分组名称
       },
       description: "组件宽度",
-      defaultValue: "100px",
+
       control: "text",
     },
     height: {
@@ -24,7 +44,7 @@ export default {
         category: "frame", // 创建一个自定义分组名称
       },
       description: "组件高度",
-      value: "10px",
+
       control: "text",
     },
 
@@ -67,7 +87,7 @@ export default {
     },
   },
   args: {
-    width: "150px",
+    width: "180px",
     height: "10px",
   },
 };

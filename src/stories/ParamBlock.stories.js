@@ -1,37 +1,14 @@
-import { createTabBar } from "./TabBar";
-import BookmarkPage from "../../framework/UI/SystemUI/BookmarkPage.js";
-
-import "./TabBar.css";
+import { createParamBlock } from "./ParamBlock";
+import "./ParamBlock.css";
 
 // More on how to set up stories at: https://storybook.js.org/docs/html/writing-stories/introduction
 export default {
-  title: "Example/TabBar",
+  title: "Example/ParamBlock",
   tags: ["autodocs"],
   render: ({ label, ...args }) => {
     // You can either use a function to create DOM elements or use a plain html string!
-    if (!document.querySelector("#storybook-docs").getAttribute("hidden")) {
-      document.querySelector(".sb-story").innerHTML = "";
-      const TabBarElement = document.createElement("div");
-      const tem = new BookmarkPage(TabBarElement, {
-        name: "TabBar",
-        frame: {
-          width: args.width,
-          height: args.height,
-          x: args.x,
-          y: args.y,
-        },
-        attributes: {},
-        class: [],
-        content: {
-          list: args.list,
-        },
-        style: args.style,
-        actions: [],
-        script: [],
-      });
-      tem.startDrawing("storybook-docs .sb-story");
-    }
-    return createTabBar({ label, ...args });
+
+    return createParamBlock({ label, ...args });
   },
   argTypes: {
     width: {
@@ -66,7 +43,15 @@ export default {
       value: "0px",
       control: "text",
     },
-
+    layout: {
+      table: {
+        category: "attributes", // 创建一个自定义分组名称
+      },
+      description: "排序方式",
+      control: "select",
+      options: ["v-layout", "h-layout"],
+      default: "h-layout", // 设置默认选项
+    },
     list: {
       table: {
         category: "content", // 创建一个自定义分组名称
@@ -89,20 +74,20 @@ export default {
     },
   },
   args: {
-    width: "150px",
-    height: "100px",
+    width: "200px",
+    height: "30px",
     x: "0px",
     y: "0px",
   },
 };
 
 // More on writing stories with args: https://storybook.js.org/docs/html/writing-stories/args
-export const TabBar = {
+export const ParamBlock = {
   args: {
-    name: "TabBar",
+    name: "ParamBlock",
     class: [],
-    scripts: ["TabBar.js"],
+    scripts: ["ParamBlock.js"],
     style: { "font-size": "12px" },
-    list: ["item1", "item2"],
+    text: "number",
   },
 };

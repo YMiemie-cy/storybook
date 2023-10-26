@@ -35,12 +35,9 @@ class BaseView {
     }
 
     if (parent !== "layers") {
-      console.log(
-        "document.querySelector(`#${parent}`).appendChild(this.element);",
-        document.querySelector(
-          "#editor .components  .component-item:nth-of-type(1)"
-        )
-      );
+      if (parent === undefined) {
+        return this.element;
+      }
       document.querySelector(`#${parent}`).appendChild(this.element);
     } else if (parent === "BookmarkPage") {
       document.querySelector(`#${parent}`).appendChild(this.element);

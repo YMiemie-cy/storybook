@@ -284,6 +284,8 @@ class CheckBox extends BaseView {
 
     if (parent === "layers") {
       parentContainer = document.querySelector("#container");
+    } else if (parent === undefined) {
+      return domElement;
     } else {
       parentContainer = document.querySelector(`#${parent}`);
     }

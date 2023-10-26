@@ -7,6 +7,8 @@ export const createSlider = ({ width, height, style }) => {
     frame: {
       width: width,
       height: height,
+      x: x,
+      y: y,
     },
     attributes: {},
     class: [],

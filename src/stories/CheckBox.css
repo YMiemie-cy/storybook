@@ -1,0 +1,24 @@
+.checkBox-container{
+  cursor :pointer;
+position :relative;
+border-radius :4px;
+}
+#CheckBox:hover .checkbox-text {
+  color: #c4c6ca !important;
+
+}
+
+ #CheckBox:hover .select-box {
+  background: rgba(250, 124, 112, 0.05) !important;
+
+}
+
+
+#CheckBox .checkbox-text{
+  color: #7e828a;
+}
+
+
+#CheckBox .select-box{
+  background: none;
+}

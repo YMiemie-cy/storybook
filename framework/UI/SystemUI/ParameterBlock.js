@@ -197,7 +197,7 @@ class ParameterBlock extends BaseView {
 `;
 
     if (this.class) {
-      this.class.forEach(item => {
+      this.class.forEach((item) => {
         this.element.classList.add(item);
       });
     }
@@ -263,9 +263,9 @@ class ParameterBlock extends BaseView {
               }
             });
             if (action.data.length > 0) {
-              functionCallString = `${action.script.split(".")[0]}(${Array.from(action.data).join(
-                ", "
-              )})`;
+              functionCallString = `${action.script.split(".")[0]}(${Array.from(
+                action.data
+              ).join(", ")})`;
             } else {
               functionCallString = `${action.script.split(".")[0]}()`;
             }
@@ -291,6 +291,8 @@ class ParameterBlock extends BaseView {
 
     if (parent === "layers") {
       parentContainer = document.querySelector("#container");
+    } else if (parent === undefined) {
+      return domElement;
     } else {
       parentContainer = document.querySelector(`#${parent}`);
     }
@@ -300,7 +302,8 @@ class ParameterBlock extends BaseView {
     parentContainer.appendChild(domElement);
 
     if (this.frame.color) {
-      this.element.querySelector(".parameterBlock-text").style.color = this.frame.color;
+      this.element.querySelector(".parameterBlock-text").style.color =
+        this.frame.color;
     }
 
     let styleTag = document.createElement("style");
@@ -331,9 +334,9 @@ class ParameterBlock extends BaseView {
               }
             });
             if (action.data.length > 0) {
-              functionCallString = `${action.script.split(".")[0]}(${Array.from(action.data).join(
-                ", "
-              )})`;
+              functionCallString = `${action.script.split(".")[0]}(${Array.from(
+                action.data
+              ).join(", ")})`;
             } else {
               functionCallString = `${action.script.split(".")[0]}()`;
             }
@@ -368,9 +371,9 @@ class ParameterBlock extends BaseView {
             }
           });
           if (action.data.length > 0) {
-            functionCallString = `${action.script.split(".")[0]}(${Array.from(action.data).join(
-              ", "
-            )})`;
+            functionCallString = `${action.script.split(".")[0]}(${Array.from(
+              action.data
+            ).join(", ")})`;
           } else {
             functionCallString = `${action.script.split(".")[0]}()`;
           }

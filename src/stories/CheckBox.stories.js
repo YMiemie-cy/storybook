@@ -1,19 +1,19 @@
-import { createTabBar } from "./TabBar";
-import BookmarkPage from "../../framework/UI/SystemUI/BookmarkPage.js";
-
-import "./TabBar.css";
+import { createCheckBox } from "./CheckBox";
+import CheckBoxEle from "../../framework/UI/SystemUI/CheckBox.js";
+import "./CheckBox.css";
 
 // More on how to set up stories at: https://storybook.js.org/docs/html/writing-stories/introduction
 export default {
-  title: "Example/TabBar",
+  title: "Example/CheckBox",
   tags: ["autodocs"],
   render: ({ label, ...args }) => {
     // You can either use a function to create DOM elements or use a plain html string!
+    // You can either use a function to create DOM elements or use a plain html string!
     if (!document.querySelector("#storybook-docs").getAttribute("hidden")) {
       document.querySelector(".sb-story").innerHTML = "";
-      const TabBarElement = document.createElement("div");
-      const tem = new BookmarkPage(TabBarElement, {
-        name: "TabBar",
+      const CheckBoxElement = document.createElement("div");
+      const tem = new CheckBoxEle(CheckBoxElement, {
+        name: "CheckBox",
         frame: {
           width: args.width,
           height: args.height,
@@ -23,7 +23,7 @@ export default {
         attributes: {},
         class: [],
         content: {
-          list: args.list,
+          text: args.text,
         },
         style: args.style,
         actions: [],
@@ -31,7 +31,8 @@ export default {
       });
       tem.startDrawing("storybook-docs .sb-story");
     }
-    return createTabBar({ label, ...args });
+
+    return createCheckBox({ label, ...args });
   },
   argTypes: {
     width: {
@@ -66,7 +67,15 @@ export default {
       value: "0px",
       control: "text",
     },
-
+    layout: {
+      table: {
+        category: "attributes", // 创建一个自定义分组名称
+      },
+      description: "排序方式",
+      control: "select",
+      options: ["v-layout", "h-layout"],
+      default: "h-layout", // 设置默认选项
+    },
     list: {
       table: {
         category: "content", // 创建一个自定义分组名称
@@ -89,20 +98,20 @@ export default {
     },
   },
   args: {
-    width: "150px",
-    height: "100px",
+    width: "100px",
+    height: "30px",
     x: "0px",
     y: "0px",
   },
 };
 
 // More on writing stories with args: https://storybook.js.org/docs/html/writing-stories/args
-export const TabBar = {
+export const CheckBox = {
   args: {
-    name: "TabBar",
+    name: "CheckBox",
     class: [],
-    scripts: ["TabBar.js"],
+    scripts: ["CheckBox.js"],
     style: { "font-size": "12px" },
-    list: ["item1", "item2"],
+    text: "number",
   },
 };
